@@ -80,7 +80,7 @@
 	writeDump( myArr.reduce( (acc=0,x) => {return acc+x} ) )
 	
 	echo( '<h1>12</h1>' )
-    myarray = [ ()=>12 ]
+	myarray = [ ()=>12 ]
 	// The function [1] does not exist in the Object, only the following functions are available: [append,avg,clear,contains,containsNoCase,delete...
 	// https://luceeserver.atlassian.net/browse/LDEV-2489?
 	// writeOutput( myarray[ 1 ]() )
