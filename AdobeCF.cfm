@@ -87,6 +87,16 @@
 	
 	writeOutput( '<h1>12</h1>' )
     myarray = [ ()=>12 ]
-    writeOutput( myarray[ 1 ]() )
+	writeOutput( myarray[ 1 ]() )
+	
+	writeOutput( '<h1>Hi Adobe</h1>' )
+	// Invalid CFML construct found on line 2 at column 26. on line 2
+	// https://tracker.adobe.com/#/view/CF-4205268
+	//say = (message)=>(to)=>()=>"#message# #to#";
+	// workaround:
+	say = (message)=>{ return (to)=>{return ()=>"Not saying: #message# #to#"}};
+	sayHi = say("Hi");
+	sayHiToAdobe = sayHi("Adobe");
+	writeDump( sayHiToAdobe() );	
 	
 </cfscript>

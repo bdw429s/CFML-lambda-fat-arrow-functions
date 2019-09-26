@@ -84,4 +84,11 @@
 	// The function [1] does not exist in the Object, only the following functions are available: [append,avg,clear,contains,containsNoCase,delete...
 	// https://luceeserver.atlassian.net/browse/LDEV-2489?
 	// writeOutput( myarray[ 1 ]() )
+
+	writeOutput( '<h1>Hi Adobe</h1>' )
+	say = (message)=>(to)=>()=>"#message# #to#";
+	sayHi = say("Hi");
+	sayHiToAdobe = sayHi("Adobe");
+	writeDump( sayHiToAdobe() );
+	
 </cfscript>
